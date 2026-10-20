@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مهامي - قايمة المهام السعودية</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>مهامي ✅</h1>
+      <p id="greeting" class="sub"></p>
+    </header>
+
+    <form id="taskForm" autocomplete="off">
+      <input id="taskInput" type="text" maxlength="120" placeholder="وش عندك اليوم؟ اكتب مهمتك..." required>
+      <select id="prioritySelect" aria-label="الأولوية">
+        <option value="normal">عادي</option>
+        <option value="high">مرة مهم 🔥</option>
+        <option value="low">على مهلك</option>
+      </select>
+      <button type="submit">أبشر، ضيفها</button>
+    </form>
+
+    <nav class="tabs" aria-label="تصفية المهام">
+      <a href="#all" data-tab="all">الكل</a>
+      <a href="#active" data-tab="active">باقي</a>
+      <a href="#done" data-tab="done">خلصت</a>
+    </nav>
+
+    <ul id="taskList" class="list"></ul>
+    <p id="emptyMsg" class="empty" hidden></p>
+
+    <footer>
+      <span id="counter"></span>
+      <button id="clearDone" class="link" type="button">امسح اللي خلصت</button>
+    </footer>
+    <p class="hint">كليك على المهمة عشان تخلصها، ودبل كليك عشان تعدلها.</p>
+  </main>
+
+  <script src="js/todo.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
